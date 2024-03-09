@@ -1,0 +1,266 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgb(29, 29, 29);
+}
+
+.bodyy{
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+}
+
+.bodyy:has(.box:hover){
+    background: var(--img) center;
+
+}
+
+div.into{
+    color: #fffefe;
+}
+
+div.into>h2{
+    margin: 12px;
+    padding: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+div.into>p{
+    margin: 12px;
+    padding: 12px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.cont{
+    /*border: 2px solid red;*/
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap : 1em;
+    width: 800px;
+    height: 500px;
+    transition: all 400ms;
+}
+
+.box{
+    background: var(--img) center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.cont:hover .box{
+    filter: grayscale();
+}
+
+.cont:has(.box-1:hover){
+    grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+}
+
+.cont:has(.box-2:hover){
+    grid-template-columns: 1fr 3fr 1fr 1fr 1fr;
+}
+
+.cont:has(.box-3:hover){
+    grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
+}
+
+.cont:has(.box-4:hover){
+    grid-template-columns: 1fr 1fr 1fr 3fr 1fr;
+}
+
+.cont:has(.box-5:hover){
+    grid-template-columns: 1fr 1fr 1fr 1fr 3fr;
+}
+
+.cont .box:hover{
+    filter:none;
+    scale:1.1;
+    border-radius:15px;
+
+}
+
+.box:nth-child(even){
+    transform: translateY(-16px);
+    z-index: 10px;
+}
+.box:nth-child(odd){
+    transform: translateY(16px);
+}
+.box::after{
+    content:attr(data-text);
+    position: absolute;
+    bottom: 10%;
+    left: 45%;
+    background-color: #000;
+    color: aliceblue;
+    padding: 8px 25px;
+    transition: transform 0.5s;
+    transform: translateY(100px);
+}
+
+.box:hover:after{
+    transform: translateY(0px);
+}
+
+nav{
+    background: #6600a6;
+    height: 100px;
+    width: 100%;
+}
+
+label.logo{
+    color:rgb(255, 255, 255);
+    font-size: 35px;
+    line-height: 80px;
+    font-weight: bold;
+    float: left;
+}
+label > h2 {
+    padding-left: 80px;
+}
+nav ul{
+    float :right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height:  90px;
+    margin :0 5px;
+}
+nav ul li  a {
+    color : rgb(255, 255, 255);
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform : uppercase;
+}
+
+nav ul li a:hover{
+    background : #9084ff;
+    transition: .5s;
+}
+
+nav ul li a.sigin{
+    color: white;
+    background: #9084ff ;
+    padding: 7px 13px;
+    border-radius: 50px;
+    text-transform: uppercase;
+}
+
+a.sigin:hover{
+    background: black;
+    transition: .5s;
+}
+
+h2.ss{
+    text-transform: uppercase;
+    font-weight:bolder;
+    font-size: 30px;
+    margin: 20px 5px;
+}
+
+hr{
+    color:grey;
+    margin: 5px 10px;
+}
+.container{
+    border: #cbc9c9 2px solid;
+    padding: 30px;
+    margin: 6px;
+    border-radius: 5px;
+    color: #fffefe;
+}
+div input{
+    margin: 10px 0px;
+    
+}
+input{
+    padding: 10px;
+    margin:0 10px;
+    width: 50%;
+    height: auto;
+    text-align: center;
+    background: rgb(214, 214, 214);
+    border-radius: 9px;
+    opacity: 0.9;
+    border: none;
+
+}
+
+input[type=text]:focus,input[type=email]:focus,input[type=password]:focus{
+    background: #fffefe;
+    opacity: 1;
+}
+input[type=tel]:focus{
+    background: #fffefe;
+    opacity: 1;
+}
+
+/*
+#login-form input[type="password"],#login-form input[type="text"]{
+    width: 50%;
+    padding: 12px 36px 12px 12px;
+    box-sizing: border-box;
+}
+
+.password-container{
+    width: 300px;
+    position: relative;
+}
+
+.fa-eye{
+    position: absolute;
+    top: 61%;
+    left: 45%;
+    cursor: pointer;
+    color: lightblue;
+}
+*/
+input[type=submit]{
+    width: 50%;
+    background: #9084ff;
+}
+
+input[type=submit]:focus{
+    color:aliceblue;
+    background: rgb(11, 235, 11);
+}
+
+div > p > a.ioi{
+    color: #9084ff;
+}
+
+div>p>a.ioi:hover{
+    color:#fffefe;
+    background: #c2bbff;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+div.ee{
+    margin:  10px 0px;
+
+}
+
+div.qq{
+    /*margin-top: 20px;*/
+    margin: 10px;
+}
+
+div.bgii{
+    margin: 0px;
+    padding: 10px;
+    background-color: rgb(0, 0, 0);
+    color: #fffefe;
+
+}
