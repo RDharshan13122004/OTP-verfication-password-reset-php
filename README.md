@@ -1,4 +1,4 @@
-# PHPMailer 
+# OTP verification using PHP
 
  This project is based on OTP verification to reset the password which does the job of sending to OTP to the mail. The project carries sequence of steps which is used for Account recovery and verifying the OTP which the user has entered, thereby resetting the user account.
 
