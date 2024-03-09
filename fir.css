@@ -1,0 +1,49 @@
+div.fopgbod{
+    margin: 80px;
+    padding: 15px;
+    /*width: 175vh;*/
+    height: auto;
+    
+    /*justify-content: center;
+    align-items: center;*/
+    background-color: aliceblue;
+    border: #cbc9c9 2px solid;
+    border-radius: 5px;
+
+
+}
+
+div.fopgbod input{
+    padding: 10px;
+    margin:10px 10px;
+    height: auto;
+    text-align: center;
+    background: rgb(214, 214, 214);
+    border-radius: 9px;
+    opacity: 0.9;
+    border: none;
+    width: 75%;
+}
+
+input[type=tel]:focus,input[type=text]:focus,input[type=email]:focus,input[type=password]:focus{
+    background: #fffefe;
+    opacity: 1;
+}
+
+input.tt[type=submit]{
+    width: 20%;
+    background: #9084ff;
+    padding: 15px;
+    margin-left: 600px;
+}
+
+input[type=submit]:focus{
+    color:aliceblue;
+    background: rgb(11, 235, 11);
+}
+
+.check{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
